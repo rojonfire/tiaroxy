@@ -4,13 +4,33 @@
   font-family: 'Montserrat', sans-serif;
   src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 }
+.cursor{
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  border: 2px solid #CC7B7C;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 
 body {
   margin: 0;
 
 }
+.navlink{
+  color: black;
+  position: relative;
+  align-items: center;
+  text-decoration: none;
+ }
 
-
+ .navlink:hover{
+  color: black;
+ }
+ 
 
 .ant-layout {
   display: flex;
@@ -23,6 +43,34 @@ body {
   margin-left: 79px;
   margin-top: 31px;
 }
+.verde{
+  text-decoration-line:line-through;
+  text-decoration-color: #CC7B7CCC;
+  text-decoration-thickness: 10px;
+  font-weight: 900;
+ }
+.underlinedinamico{
+  display: inline-block;
+  position: relative;
+
+  }
+.underlinedinamico::before{
+  content: " ";
+  position: absolute;
+  top: 15px;
+  height: 10px;
+  background-color: #CC7B7CCC;
+  
+  width: 0;
+  transition: width 0.3s ease-out;
+ }
+.underlinedinamico:hover::before{
+  width: 100%;
+ }
+ .widhtextfinal{
+  width: 42vw;
+  font-size: 1.3vw;
+ }
 
 .navmenu{
   text-align: left;
@@ -31,13 +79,20 @@ body {
 }
 .canvas{
   border: solid 1px transparent !important;
-  
+
   position: relative;
+  cursor: url(drawingmouse.png),pointer;
+  
   
 
 }
+
+.canvas:active{
+  cursor: none;
+}
 .flechas{
-  margin-top: 36vh;
+  margin-top: 0vh;
+  margin-left: 75vw;
 }
 
 .supermargin{
@@ -96,8 +151,30 @@ body {
     margin-left:58px;
     
   }
+  .stroke0{
+    border-bottom: 1px solid #20221D;
+    width: 41vw;
+    margin-bottom: 3vh;
+ 
+  }
 
-
+  .marginsubmenu{
+    margin-top: 10vh;
+    margin-left: 80px;
+     }
+  .listwork{
+    margin-left: 80px;
+    margin-top: 4vh;
+    font-size: 1.8vw;
+    font-family: 'Montserrat', sans-serif;
+  }
+.marginsubright{  
+  margin-right: 10vw;
+}
+  .letrasubmenu{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2vw;
+  }
 
 }
 
@@ -119,4 +196,33 @@ body {
   }
 
 
+}
+
+
+/* bouncing*/
+
+/*espacio destinado para todo lo que va a saltar*/
+.bouncer{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 300px;
+  height: 300px;
+}
+/*espacio destinado para todo lo que va a saltar*/
+
+/*espacio destinado para cada elemento*/
+.bouncer div{
+  width: 115.2px;
+  height: 175.5px;
+  background-image: url(/Users/mainbelen/tiaroxy/antd-demo/src/Arrowrok.png);
+  border-radius: 50%;
+  animation: bouncer 0.5s cubic-bezier(.19,.57,.3,.98) infinite alternate; /*bouncer es el nombre de la animacion que creamos en keyframes*/
+}
+.bouncer div:nth-child(2){ /*esto es para el sgundo elemento del div solamente*/
+  animation-delay: 0.5s;
+}
+@keyframes bouncer {
+  from{transform: translateY(0)}
+  to{transform: translateY(-100px)}
 }
