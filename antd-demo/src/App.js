@@ -87,7 +87,7 @@ function App() {
         variants={variants}
         animate={cursorVariant}
       />
-      <Row>
+      <Row className="nocursor">
         <Col span={8} className="peter">
           <span
             onMouseEnter={textEnter}
@@ -129,6 +129,7 @@ function App() {
             About
           </Link>
         </Col>
+
         <Col className="navmenu">
           <Link
             onMouseEnter={textEnter}
@@ -146,26 +147,28 @@ function App() {
         </Col>
       </Row>
       <Content>
-        <div
-          onMouseEnter={textEnter}
-          onMouseLeave={textLeave}
-          className="Tittle"
-        >
-          ROKSANA PAT
-        </div>
-        <div className="subtitulo">
-          <Typewriter
-            options={{
-              strings: ["UX designer", "UX designer"],
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </div>
-        <div className="flechas">
-          <div className="bouncer">
-            <div></div>
-            <div></div>
+        <div className="nocursor">
+          <div
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+            className="Tittle"
+          >
+            ROKSANA PAT
+          </div>
+          <div className="subtitulo">
+            <Typewriter
+              options={{
+                strings: ["UX designer", "UX designer"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
+          <div className="flechas">
+            <div className="bouncer">
+              <div></div>
+              <div></div>
+            </div>
           </div>
         </div>
         <div onMouseEnter={texttilin} onMouseLeave={textLeave}>
@@ -174,98 +177,137 @@ function App() {
             strokeWidth={6}
             strokeColor="#CC7B7CCC"
             backgroundImage={require("./Canvaspuntosfondo.png")}
-            height="866px"
+            height="100vh"
           />
         </div>
-        <Row className="marginsubmenu letrasubmenu">
-          <Col className="marginsubright">
-            <span className={work === false ? "workplace " : "workplace verde"}>
-              work
-            </span>
-          </Col>
-          <Col className="marginsubright">
-            {" "}
-            <span className={about === false ? "about " : "about verde"}>
-              about
-            </span>
-          </Col>
-          <Col className="marginsubright">
-            {" "}
-            <span className={contact === false ? "contact " : "contact verde"}>
-              contact
-            </span>
-          </Col>
-        </Row>
-
-        {work ? (
-          <div className="listwork">
-            <div className="stroke0 ">
-              {" "}
-              <span className="underlinedinamico">Co-Data</span>
-            </div>
-            <div className="stroke0">
-              <span className="underlinedinamico">Fio-tag</span>
-            </div>
-            <div className="stroke0">
-              <span className="underlinedinamico">Jeju Beauty Store </span>
-            </div>
-            <div className="stroke0">
-              <span className="underlinedinamico">Jejublog.pl</span>
-            </div>
-            <div className="stroke0">
-              <span className="underlinedinamico">House in Sweden</span>
-            </div>
-            <div className="stroke0">
-              <span className="underlinedinamico">
-                Warsaw Under Construction
+        <div className="nocursor">
+          <Row className="marginsubmenu letrasubmenu">
+            <Col className="marginsubright">
+              <span
+                className={work === false ? "workplace " : "workplace verde"}
+              >
+                work
               </span>
-            </div>
-          </div>
-        ) : null}
-
-        {about ? (
-          <div className="listwork">
-            <div className="stroke0 ">
+            </Col>
+            <Col className="marginsubright">
               {" "}
-              <span>1993</span> <span>Born in Poland</span>
-            </div>
-            <div className="stroke0">
-              <span>2021</span> <span>Master degree in Architecture</span>
-            </div>
-            <div className="stroke0">
-              <span>2023</span> <span>Master degree in Interaction Design</span>
-            </div>
-            <div className="widhtextfinal">
-              <span className="">
-                Hi! I’m educated as an architect and IxD designer, experienced
-                in entrepreneurship and interested in social innovation. I have
-                worked in Poland, Spain and Germany and currently I’m based in
-                Malmö, Sweden. If you want to know more, check my{" "}
-                <span className="underlinedinamico">LinkedIn </span>
-                profile.{" "}
+              <span className={about === false ? "about " : "about verde"}>
+                about
               </span>
-            </div>
-          </div>
-        ) : null}
-
-        {contact ? (
-          <div className="listwork">
-            <div className="stroke0 ">
+            </Col>
+            <Col className="marginsubright">
               {" "}
-              <span>Text me</span> <span>roksana.patrzalek@gmail.com</span>
-            </div>
-            <div className="stroke0">
-              <span>Connect</span> <span>LinkedIn</span>
-            </div>
-
-            <div className="widhtextfinal">
-              <span className="">
-                Enjoying my works? Get in touch! I'm always open for new
-                collaborations. Any idea, suggestion or crticism is appreciated.
+              <span
+                className={contact === false ? "contact " : "contact verde"}
+              >
+                contact
               </span>
+            </Col>
+          </Row>
+          {work ? (
+            <div className="listwork">
+              <div className="stroke0 ">
+                {" "}
+                <span
+                  onMouseEnter={textEnter}
+                  onMouseLeave={textLeave}
+                  className="underlinedinamico"
+                >
+                  Co-Data
+                </span>
+              </div>
+              <div className="stroke0">
+                <span
+                  onMouseEnter={textEnter}
+                  onMouseLeave={textLeave}
+                  className="underlinedinamico"
+                >
+                  Fio-tag
+                </span>
+              </div>
+              <div className="stroke0">
+                <span
+                  onMouseEnter={textEnter}
+                  onMouseLeave={textLeave}
+                  className="underlinedinamico"
+                >
+                  Jeju Beauty Store{" "}
+                </span>
+              </div>
+              <div className="stroke0">
+                <span
+                  onMouseEnter={textEnter}
+                  onMouseLeave={textLeave}
+                  className="underlinedinamico"
+                >
+                  Jejublog.pl
+                </span>
+              </div>
+              <div
+                onMouseEnter={textEnter}
+                onMouseLeave={textLeave}
+                className="stroke0"
+              >
+                <span className="underlinedinamico">House in Sweden</span>
+              </div>
+              <div className="stroke0">
+                <span
+                  onMouseEnter={textEnter}
+                  onMouseLeave={textLeave}
+                  className="underlinedinamico"
+                >
+                  Warsaw Under Construction
+                </span>
+              </div>
             </div>
-          </div>
-        ) : null}
+          ) : null}
+          {about ? (
+            <div className="listwork">
+              <div className="stroke0 ">
+                {" "}
+                <span className="esp1">1993</span> <span>Born in Poland</span>
+              </div>
+              <div className="stroke0">
+                <span className="esp1">2021</span>{" "}
+                <span>Master degree in Architecture</span>
+              </div>
+              <div className="stroke0">
+                <span className="esp1">2023</span>{" "}
+                <span>Master degree in Interaction Design</span>
+              </div>
+              <div className="widhtextfinal">
+                <span className="">
+                  Hi! I’m educated as an architect and IxD designer, experienced
+                  in entrepreneurship and interested in social innovation. I
+                  have worked in Poland, Spain and Germany and currently I’m
+                  based in Malmö, Sweden. If you want to know more, check my{" "}
+                  <span className="underlinedinamico">LinkedIn </span>
+                  profile.{" "}
+                </span>
+              </div>
+            </div>
+          ) : null}
+          {contact ? (
+            <div className="listwork">
+              <div className="stroke0 ">
+                {" "}
+                <span className="esp1">Text me</span>{" "}
+                <span>roksana.patrzalek@gmail.com</span>
+              </div>
+              <div className="stroke0">
+                <span className="esp1">Connect</span> <span>LinkedIn</span>
+              </div>
+
+              <div className="widhtextfinal">
+                <span className="">
+                  Enjoying my works? Get in touch! I'm always open for new
+                  collaborations. Any idea, suggestion or crticism is
+                  appreciated.
+                </span>
+              </div>
+            </div>
+          ) : null}{" "}
+        </div>
       </Content>
 
       <Footer
