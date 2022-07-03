@@ -1,0 +1,122 @@
+@import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+}
+
+body {
+  margin: 0;
+
+}
+
+
+
+.ant-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background-color: white !important;
+}
+.peter{
+  margin-left: 79px;
+  margin-top: 31px;
+}
+
+.navmenu{
+  text-align: left;
+  margin-top: 31px;
+  margin-right: 93px;
+}
+.canvas{
+  border: solid 1px transparent !important;
+  
+  position: relative;
+  
+
+}
+.flechas{
+  margin-top: 36vh;
+}
+
+.supermargin{
+  margin-left: 32vw;
+}
+
+
+
+@media screen and (min-width: 576) {
+/* celular*/
+
+
+
+}
+
+
+@media screen and (min-width: 768) {
+/* celular*/
+
+
+}
+
+@media screen and (min-width: 992) {
+/* celular acostado*/
+
+
+}
+
+@media screen and (min-width: 1200px) { 
+/* ipad y macbook-air 1440*/
+  .Tittle{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.2vw;
+    margin-top: 10vh;
+    margin-left: 58px;
+    font-weight: 200 !important;
+    line-height: 243.8px;
+    color: #20221D;
+    
+  }
+  .Tittle:hover{
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+
+  .subtitulo{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400 !important;
+    font-size: 5.2vw;
+    line-height: 180px;
+    color: #20221D;
+    text-align: left;
+    text-decoration-line: underline;
+    margin-top: -35px;
+    margin-left:58px;
+    
+  }
+
+
+
+}
+
+
+@media screen and (min-width: 1600px) {
+/* pc*/
+  .Tittle{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 200px;
+    font-weight: 200 !important;
+    line-height: 243.8px;
+    margin-top: 183px;
+    color: #20221D;
+    margin-left:2vw;
+  }
+  .Tittle:hover{
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+
+
+}
